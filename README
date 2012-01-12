@@ -1,0 +1,6 @@
+This is a ColdFusion wrapper for the Stripe.com API (http://stripe.com)
+
+It supports all the methods of the Stripe API.
+
+Compatible with Railo and Adobe ColdFusion.
+
