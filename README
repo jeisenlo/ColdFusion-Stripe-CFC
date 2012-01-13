@@ -10,7 +10,7 @@ BASIC USAGE - example assumes use of Stripe.js (https://gist.github.com/1084146)
 Within your Application.cfc place the following code:
 
 application.stripeApiKey = 'YOUR STRIPE SECRET PUBLISHABLE KEY';
-application.Stripe = createObject('component','Stripe').init(stripeApiKey=application.stripeApiKey);
+application.Stripe = createObject('component','path.to.Stripe').init(stripeApiKey=application.stripeApiKey);
 
 
 On the page you want to process payments:
