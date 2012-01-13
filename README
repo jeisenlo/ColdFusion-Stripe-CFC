@@ -4,3 +4,15 @@ It supports all the methods of the Stripe API.
 
 Compatible with Railo and Adobe ColdFusion.
 
+
+BASIC USAGE - example assumes use of Stripe.js (https://gist.github.com/1084146) although it is not necessary
+
+Within your Application.cfc place the following code:
+
+application.stripeApiKey = 'YOUR STRIPE SECRET PUBLISHABLE KEY';
+application.Stripe = createObject('component','Stripe').init(stripeApiKey=application.stripeApiKey);
+
+
+On the page you want to process payments:
+
+local.StripeResult = application.Stripe.createCharge(amount=form.amount,card=form.stripeToken,description='Payment for products');
