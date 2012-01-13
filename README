@@ -5,7 +5,7 @@ It supports all the methods of the Stripe API.
 Compatible with Railo and Adobe ColdFusion.
 
 
-BASIC USAGE - example assumes use of Stripe.js (https://gist.github.com/1084146) although it is not necessary
+BASIC USAGE - works great with Stripe.js (https://gist.github.com/1084146) although it is not necessary
 
 Within your Application.cfc place the following code:
 
