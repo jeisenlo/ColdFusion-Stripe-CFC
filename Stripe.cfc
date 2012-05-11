@@ -77,9 +77,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	} 
@@ -115,9 +115,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}  
@@ -133,9 +133,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -195,9 +195,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -221,9 +221,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -273,9 +273,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -288,9 +288,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -338,9 +338,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -353,9 +353,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -380,9 +380,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -406,9 +406,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -422,9 +422,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -437,9 +437,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -491,9 +491,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -507,9 +507,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -532,9 +532,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -566,9 +566,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -587,9 +587,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -602,9 +602,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -641,9 +641,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -674,9 +674,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -700,9 +700,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
@@ -714,9 +714,9 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
 		if (NOT isDefined("local.HTTPResult.statusCode")) {
-			throw(errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
-		} else if (local.HTTPResult.statusCode NEQ "200") {
-			throw(errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
+			throw(type='Stripe',errorcode="stripe_unresponsive", message="The Stripe server did not respond.", detail="The Stripe server did not respond.");
+		} else if (left(local.HTTPResult.statusCode,3) NEQ "200") {
+			throw(type='Stripe',errorcode=local.HTTPResult.statusCode, message=local.HTTPResult.statuscode, detail=local.HTTPResult.filecontent);
 		}
 		return deserializeJSON(local.HTTPResult.filecontent);
 	}
