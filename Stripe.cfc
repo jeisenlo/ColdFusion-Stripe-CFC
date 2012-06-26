@@ -450,6 +450,7 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 	public struct function updateSubscription(required string customerid, required string planid, string coupon='', boolean prorate=true, timestamp trial_end, any card) {
 		
 		local.HTTPService = createHTTPService('POST');
+		local.HTTPService.addParam(type='formfield',name='plan',value=arguments.planid);
 
 		local.HTTPService.setUrl(getBaseUrl() & 'customers/' & arguments.customerid & '/subscription');
 		if (Len(Trim(arguments.coupon))) {
