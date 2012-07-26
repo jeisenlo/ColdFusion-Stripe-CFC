@@ -725,11 +725,12 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 	
 /* HELPER FUNCTIONS */	
 
-	private HTTP function createHTTPService( string urlmethod='POST' ) {
-		local.HTTPService = new HTTP(username=getStripeApiKey(),password='');
-		local.HTTPService.setMethod(urlmethod);
+	private HTTP function createHTTPService(string urlmethod='POST', int httptimeout=1000) {
+		local.HTTPService = new HTTP();
+		local.HTTPService.setUsername(getStripeApiKey());
+		local.HTTPService.setMethod(arguments.urlmethod);
 		local.HTTPService.setCharset('utf-8');
-		local.HTTPService.setTimeout(1000);
+		local.HTTPService.setTimeout(arguments.httptimeout);
 
 		return local.HTTPService;
 	}
