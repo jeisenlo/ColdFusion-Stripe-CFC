@@ -16,7 +16,7 @@ limitations under the License.
 
 component name="Stripe" output=false accessors=true description="ColdFusion Wrapper for Stripe.com API" {
 	
-	property string stripeApiKey; // Stripe Secret Publishable Key
+	property string stripeApiKey; // Stripe Secret Key
 	property string baseUrl;
 	property string currency; // Stripe currently has only 'usd' support
 	
