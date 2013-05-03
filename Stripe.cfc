@@ -458,7 +458,7 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		}
 		local.HTTPService.addParam(type='formfield',name='prorate',value=arguments.prorate);
 		if (StructKeyExists(arguments,'trial_end') AND IsDate(arguments.trial_end)) {
-			loca.intUTCDate = timeToUTCInt(arguments.trial_end);
+			local.intUTCDate = timeToUTCInt(arguments.trial_end);
 			local.HTTPService.addParam(type='formfield',name='trial_end',value=local.intUTCDate);
 		}
 		if (StructKeyExists(arguments,'card') AND isStruct(arguments.card)) {
