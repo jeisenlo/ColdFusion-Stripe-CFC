@@ -189,7 +189,7 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 			local.HTTPService.addParam(type='formfield',name='plan',value=Trim(arguments.plan));
 		} 
 		if (StructKeyExists(arguments,'trial_end') AND IsDate(arguments.trial_end)) {
-			loca.intUTCDate = timeToUTCInt(arguments.trial_end);
+			local.intUTCDate = timeToUTCInt(arguments.trial_end);
 			local.HTTPService.addParam(type='formfield',name='trial_end',value=local.intUTCDate);
 		}
 		local.HTTPResult = local.HTTPService.send().getPrefix();
