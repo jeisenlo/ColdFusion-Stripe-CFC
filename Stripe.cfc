@@ -32,7 +32,7 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 	
 /* CHARGES */
 	
-	public struct function createCharge(required numeric amount, string currency=getCurrency(), string customer='', any card, string description='') {
+	public struct function createCharge(required numeric amount, string currency=getCurrency(), string customer='', any card, string description='', struct metadata={}) {
 	
 		local.HTTPService = createHTTPService('POST');
 
@@ -73,6 +73,11 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		}
 		if (Len(Trim(arguments.description))) {
 			local.HTTPService.addParam(type='formfield',name='description',value=Trim(arguments.description));
+		}
+		if (structCount(arguments.metadata)) {
+			loop collection=#arguments.metadata# item="i" {
+				local.HTTPService.addParam(type='formfield',name='metadata[#i#]',value=arguments.metadata[i]);
+			}
 		}
 		local.HTTPResult = local.HTTPService.send().getPrefix();
 		
