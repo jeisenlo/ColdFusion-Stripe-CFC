@@ -16,3 +16,13 @@ application.Stripe = createObject('component','path.to.Stripe').init(stripeApiKe
 On the page you want to process payments:
 
 local.StripeResult = application.Stripe.createCharge(amount=form.amount,card=form.stripeToken,description='Payment for products');
+
+
+NOTE:
+
+If you receive the following error:
+
+401 Unauthorized
+{ "error": { "type": "invalid_request_error", "message": "Stripe no longer supports API requests made with TLS 1.0. Please initiate HTTPS connections with TLS 1.2 or later. You can learn more about this at https://stripe.com/blog/upgrading-tls." } }
+
+Try updating to Java 8. This should fix this issue.
