@@ -753,9 +753,8 @@ component name="Stripe" output=false accessors=true description="ColdFusion Wrap
 		return local.intUTCDate;
 	}
 	
-	public datetime function utcIntToTime(required numeric intUtcTime) {
-		local.baseDate = CreateDateTime(1970,1,1,0,0,0);
-		return DateAdd('s',arguments.intUtcTime,DateConvert('utc2Local',local.baseDate));;
+	public date function utcIntToTime(required numeric intUtcTime) {
+		return DateAdd('s',arguments.intUtcTime,CreateDateTime(1970,1,1,0,0,0));
 	}
 	
 }
